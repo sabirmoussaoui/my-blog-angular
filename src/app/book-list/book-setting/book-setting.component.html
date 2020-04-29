@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <h2>Enregistrer un nouveau livre</h2>
+      <form [formGroup]="bookModuleForm" (ngSubmit)="onSaveBookModule()">
+        <div class="form-group">
+          <label for="module">Module</label>
+          <input type="text" id="module"
+                 class="form-control" formControlName="module">
+        </div>
+     
+        <button class="btn btn-success" 
+                type="submit">Enregistrer
+        </button>
+  
+      </form>
+      <!-- <form [formGroup]="bookDomainForm" (ngSubmit)="onSaveBookDomain()">
+        <div class="form-group">
+            <label for="domain">Domain</label>
+            <input type="text" id="domain"  class="form-control" formControlName="domain">
+          </div>
+        <button class="btn btn-success" 
+                type="submit">Enregistrer
+        </button>
+  
+      </form> -->
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Vos livres</h2>
+      <div class="list-group">
+      <ul>
+          <li  *ngFor="let bookModule of bookModules; let i = index">
+
+            <h3 class="list-group-item-heading">
+                {{ bookModule.name }}</h3>
+          </li>
+      </ul>
+          
+      
+      </div>
+      <!-- <button class="btn btn-primary" (click)="onNewBook()">Nouveau livre</button> -->
+    </div>
+  </div>

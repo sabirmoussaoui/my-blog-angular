@@ -27,10 +27,14 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
+            "styles": [ 
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
+              "src/assets/scss/argon.scss",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+         
+            ]
           },
           "configurations": {
             "production": {
@@ -94,7 +98,8 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           }
         },
         "lint": {
@@ -123,6 +128,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "my-blog"
+    }
+  },
+  "defaultProject": "my-blog",
+  "cli": {
+    "analytics": "06d6120c-7010-4520-ad30-7f63de0472a0"
+  }
 }
